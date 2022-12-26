@@ -133,9 +133,9 @@ class MasterKey:
         >>> from nintendo_reset import MasterKey
         >>> str = MasterKey("54033620", "12", "26")
         >>> print(str.getMasterKey())
+        11253
 
 
 """
 # str = MasterKey("54033620", "12", "26")
 # print(str.getMasterKey())
-    

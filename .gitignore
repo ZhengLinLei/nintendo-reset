@@ -14,3 +14,11 @@ npm-debug.log
 __pycache__
 .pytest_cache
 text.py
+
+
+
+test.txt
+test2.txt
+
+test.js
+test.py

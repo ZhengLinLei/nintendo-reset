@@ -105,6 +105,7 @@ class CRC32:
                     0x00ffffff ^ 0x000000ff = 0x00ffffff
                 '''
                 i += 1
+                
             return crc
     def generate(self):
         # Generate the table
