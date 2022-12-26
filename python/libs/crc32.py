@@ -179,13 +179,3 @@ class CRC32:
         '''
 
 # Path: python/libs/crc32.py
-table = []
-for i in range(256):
-    crc = i
-    for j in range(8):                                                      # For each bit in the byte
-        if crc & 1:                                                         # If the bit is odd
-            crc = (crc >> 1) ^ 0xEDB88320                                   # Move the bit to the right and XOR with the polynomial
-        else:
-            crc >>= 1                                                       # Move the bit to the righ
-    # Append the CRC to the table
-    table.append(crc)
