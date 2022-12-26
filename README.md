@@ -11,7 +11,7 @@
 <br>
 <br>
 <p align="center">
-    <img src="./docs/img/mario.png" alt="Mario Logo" />
+    <img width="100px" src="./docs/img/mario.png" alt="Mario Logo" />
 </p>
 <br>
 <p align="center">
