@@ -1,0 +1,27 @@
+{
+  "name": "nintendo-reset",
+  "version": "1.0.0",
+  "description": "Generate the parental control recovery master key from Nintendo consoles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZhengLinLei/nintendo-reset.git"
+  },
+  "keywords": [
+    "nintendo",
+    "consoles",
+    "crc32",
+    "nintendods",
+    "nintendo-hacking",
+    "masterkey"
+  ],
+  "author": "ZhengLinLei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZhengLinLei/nintendo-reset/issues"
+  },
+  "homepage": "https://github.com/ZhengLinLei/nintendo-reset#readme"
+}

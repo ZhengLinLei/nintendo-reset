@@ -1,4 +1,16 @@
+# Mac
 .DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Node
 node_modules
 npm-debug.log
 .bin
+
+
+# Python
+__pycache__
+.pytest_cache
+text.py
