@@ -108,7 +108,7 @@ class CRC32:
             return crc
     def generate(self):
         # Generate the table
-        # From 0 to 256 range of 8-bit integers
+        # From 0 to 255 range of 8-bit integers
         for i in range(256):
             crc = i
             for j in range(8):                                                      # For each bit in the byte
