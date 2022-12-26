@@ -130,9 +130,9 @@ class MasterKey:
     Nintendo Parental Control Master Key Calculator
 
     Example:
-        >>> from python import MasterKey
-        >>> print(MasterKey("54033620", "12", "26"))
-        11253
+        >>> from nintendo_reset import MasterKey
+        >>> str = MasterKey("54033620", "12", "26")
+        >>> print(str.getMasterKey())
 
 
 """
