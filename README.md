@@ -2,7 +2,7 @@
 > #### Version 1.0.0Beta
 > - Project not yet completed
 > - Only the Nintendo DS and WII consoles are supported
-> - 
+> - Online version available
 
 <br>
 <br>
