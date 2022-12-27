@@ -34,6 +34,8 @@
 
 This is a simple tool to generate the master key for the Nintendo DS consoles including the WII and the 3DS.
 
+Try it out online [here](https://zhenglinlei.github.io/nintendo-reset/).
+
 
 ## Languages Avaliable
 
