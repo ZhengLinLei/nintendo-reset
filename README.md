@@ -37,8 +37,8 @@ This is a simple tool to generate the master key for the Nintendo DS consoles in
 
 ## Languages Avaliable
 
-- [] Python
-- [] JavaScript (Node.js) [In Progress]
+- [] [Python](./python)
+- [] [JavaScript (Node.js)](./javascript/)
 
 
 
