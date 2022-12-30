@@ -22,3 +22,10 @@ test2.txt
 
 test.js
 test.py
+
+
+*.db
+
+
+# JAVA
+*.bluej
