@@ -22,6 +22,7 @@ test2.txt
 
 test.js
 test.py
+test.*
 
 
 *.db
