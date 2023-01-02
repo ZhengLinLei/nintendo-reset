@@ -42,7 +42,7 @@ Try it out online [here](https://zhenglinlei.github.io/nintendo-reset/).
 - [] [Python](./python)
 - [] [JavaScript (Node.js)](./javascript/)
 - [] [TypeScript](./typescript/)
-- [] [Julia](./julia/)  (In progress)
+- [] [Julia](./julia/)
 - [] [Java](./java/) (In progress)
 - [] [Assembly](./assembly/)
     - [] [MIPS R2000](./assembly/mipsr2000/) (In progress)

@@ -48,8 +48,6 @@
 =#
 
 module CRC32
-
-    export crc32                                                                # Export the function CRC32
     
     function crc32(data::String, crc::UInt32 = 0xffffffff)
         # Generate table
@@ -186,4 +184,7 @@ module CRC32
 
         =#
     end
+
+    # Export
+    export crc32                                                                # Export the function CRC32
 end

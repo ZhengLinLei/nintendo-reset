@@ -46,5 +46,82 @@
 
 include("./libs/crc32.jl")
 
-using CRC32
+using .CRC32
+
+
+module NintendoReset
+    #=
+        Install the NintendoReset module
+
+        using Pkg
+        Pkg.add("NintendoReset")
+
+        =================================
+
+        This class is used to calculate the master key for reset parental control,
+        provided by the Nintendo manufacturer.
+
+        Attributes:
+            serial_number: The serial number of the device or the confirmation number.
+            date_device: The date of the device.
+
+
+        Extra:
+            roll, xor, ex: The parameters used to calculate the master key.
+    =#
+    function reset(serial_number::String, month::String, day::String)
+        roll = 0x14c1; xor = 0xaaaa; ex = 100000;
+        alphabet = r"[0-9]+" # "[0-9a-fA-F]+" All Numbers
+
+        if !occursin(alphabet, serial_number) || length(serial_number) != 8
+            # Validate
+            println("The serial number must be in the format of 8 digits")
+            return
+        end
+
+        # The date must be in the format of MMDD
+        # The month and day must be in range
+        date = *(month, day)
+        if !occursin(alphabet, date) || length(date) != 4
+            # Validate
+            println("The date must be in the format of MMDD")
+            return
+        end
+
+        # Calculate the master key
+        # The master key is the CRC32 checksum of the serial number and the date
+        # The result of the CRC32 checksum is XOR with 0xaaaa
+        # The result of the XOR is multiplied by 100000
+        # The result of the multiplication is added to 0x14c1
+        # The result of the addition is the master key
+        master_key = CRC32.crc32(*(date, serial_number[5:8])) # CRC32.crc32(serial_number + date)
+
+        return ((master_key ⊻ xor ) + roll) % ex
+
+
+    end
+end
+
+#=
+
+    Nintendo Parental Control Master Key Calculator
+
+    Example:
+                   _
+          _       _ _(_)_     |  Documentation: https://docs.julialang.org
+         (_)     | (_) (_)    |
+          _ _   _| |_  __ _   |  Type "?" for help, "]?" for Pkg help.
+         | | | | | | |/ _` |  |
+         | | |_| | | | (_| |  |  Version 1.8.3 (2022-11-14)
+        _/ |\__'_|_|_|\__'_|  |  Official https://julialang.org/ release
+       |__/                   |
+
+        julia> using Pkg
+        julia> Pkg.add("NintendoReset")
+        julia> using NintendoReset
+        julia> print(reset("54033620", "12", "26"))
+        11253
+
+=#
+# print(reset("54033620", "12", "26"))
 
